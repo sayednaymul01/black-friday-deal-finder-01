@@ -1,0 +1,6 @@
+[
+  { "file": "1-deals.jpg", "path": "#/", "viewport": { "width": 1280, "height": 800 } },
+  { "file": "2-deal.jpg", "path": "#/deal/airpods-pro-3", "viewport": { "width": 1280, "height": 800 } },
+  { "file": "3-search.jpg", "path": "/?q=headphones", "viewport": { "width": 1280, "height": 800 } },
+  { "file": "4-deal-phone.jpg", "path": "#/", "viewport": { "width": 390, "height": 844 } }
+]
