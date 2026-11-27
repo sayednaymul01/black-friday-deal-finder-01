@@ -1,0 +1,117 @@
+/* Bargain Beacon — Black Friday 2026. Dark shelf, amber prices. */
+:root {
+  --ink: #f4efe6;
+  --muted: #b9b2a4;
+  --bg: #14100c;
+  --panel: #1f1913;
+  --line: #3a3126;
+  --amber: #ffb224;
+  --green: #7dd87d;
+  --red: #ff8a7a;
+  --blue: #8ec5ff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+a { color: var(--amber); }
+header.hero {
+  padding: 28px 20px 18px;
+  border-bottom: 3px solid var(--amber);
+  background: linear-gradient(180deg, #241a0d, var(--bg));
+}
+header.hero h1 { margin: 0 0 4px; font-size: 34px; letter-spacing: -0.5px; }
+header.hero h1 .beacon { color: var(--amber); }
+header.hero p { margin: 4px 0; color: var(--muted); max-width: 720px; }
+header.hero .fine { font-size: 13px; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px 40px; }
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  padding: 16px 0 8px;
+}
+.controls input[type="search"],
+.controls select {
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 9px 12px;
+  font: inherit;
+}
+.controls input[type="search"] { flex: 1 1 240px; min-width: 200px; }
+.controls label { color: var(--muted); font-size: 14px; }
+.controls label input { accent-color: var(--amber); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 6px 0 14px; }
+.chip {
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font: inherit;
+  cursor: pointer;
+}
+.chip.on { background: var(--amber); color: #1a1206; border-color: var(--amber); font-weight: 700; }
+#count { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
+
+.grid, #main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+}
+.card-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.store { font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--blue); }
+.signal { font-size: 11px; font-weight: 800; letter-spacing: 0.08em; padding: 3px 8px; border-radius: 999px; }
+.sig-new-low { background: var(--green); color: #0e2a0e; }
+.sig-strong { background: var(--amber); color: #1a1206; }
+.sig-routine { background: #5a5348; color: var(--ink); }
+.card-name { margin: 10px 0 2px; font-size: 17px; line-height: 1.35; }
+.card-name a { color: var(--ink); text-decoration: none; }
+.card-name a:hover { text-decoration: underline; }
+.card-cat { margin: 0 0 10px; color: var(--muted); font-size: 13px; }
+.prices { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.sale { font-size: 26px; font-weight: 800; color: var(--amber); }
+.was { color: var(--muted); text-decoration: line-through; }
+.pct { background: #3d1a12; color: var(--red); font-weight: 800; padding: 2px 8px; border-radius: 6px; }
+.save { margin: 6px 0 2px; font-weight: 700; }
+.checked { margin: 2px 0 12px; color: var(--muted); font-size: 13px; }
+.go {
+  margin-top: auto;
+  display: inline-block;
+  background: var(--amber);
+  color: #1a1206;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+.go:hover { filter: brightness(1.1); }
+.empty { color: var(--muted); grid-column: 1 / -1; }
+.detail { grid-column: 1 / -1; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; }
+.detail h2 { margin: 6px 0 2px; font-size: 24px; }
+.detail-meta { color: var(--muted); margin: 0 0 12px; }
+.prices.big .sale { font-size: 36px; }
+.verdict { background: #241a0d; border-left: 4px solid var(--amber); padding: 10px 14px; border-radius: 0 8px 8px 0; }
+.back { font-size: 14px; }
+.big-go { margin-top: 14px; }
+footer { color: var(--muted); font-size: 13px; padding: 24px 0 0; }
+@media (max-width: 560px) {
+  header.hero h1 { font-size: 26px; }
+  .grid, #main { grid-template-columns: 1fr; }
+  .sale { font-size: 23px; }
+}

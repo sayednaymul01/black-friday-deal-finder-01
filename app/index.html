@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bargain Beacon — Black Friday 2026 Deal Finder</title>
+<meta name="description" content="Real Black Friday and Cyber Monday deals, checked on 27 November 2026 at Amazon, Best Buy, Walmart, Target and more. Search and filter by category, store and discount.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <h1><span class="beacon">Bargain Beacon</span> — Black Friday 2026</h1>
+    <p>Real deals, checked today. Every price below was read at its store or in a deals source that names the store, on <strong>27 November 2026</strong>. Each deal carries its sale price, its usual price, its discount, a link to the store, and an honest signal of whether it is really a deal.</p>
+    <p class="fine" id="checked-day">Prices checked 27 Nov 2026.</p>
+  </div>
+</header>
+<div class="wrap">
+  <div class="controls">
+    <input type="search" id="q" placeholder="Search deals — try “AirPods”, “TV”, “Dyson”…" aria-label="Search deals">
+    <label>Store <select id="store" aria-label="Filter by store"></select></label>
+    <label>Min discount <select id="mindisc" aria-label="Minimum discount">
+      <option value="0">Any</option>
+      <option value="25">25% off+</option>
+      <option value="40">40% off+</option>
+      <option value="50">50% off+</option>
+    </select></label>
+    <label>Sort <select id="sort" aria-label="Sort deals">
+      <option value="discount">Biggest discount</option>
+      <option value="savings">Biggest saving ($)</option>
+      <option value="price-low">Price: low to high</option>
+      <option value="price-high">Price: high to low</option>
+    </select></label>
+    <label><input type="checkbox" id="newlows"> New lows only</label>
+  </div>
+  <div class="chips" id="cats" role="group" aria-label="Filter by category"></div>
+  <p id="count"></p>
+  <main id="main" class="grid"></main>
+  <footer>
+    <p>How to read a deal: <strong>New low</strong> is the lowest price seen for that product in the roundups checked. <strong>Strong price</strong> is a deep cut of 25% or more. <strong>Routine sale</strong> is a real cut, but a small one. Prices move fast on Black Friday — check the store page before you buy. Sale runs through Cyber Monday, 30 November 2026.</p>
+    <p>Sources: Best Buy, Amazon, Walmart, Target, B&amp;H and Newegg Black Friday sales, as reported 27 November 2026 by 9to5Toys, TradingView / Benzinga, Tom's Guide / Gizmodo, Product Bible, Pete Matheson, Koupon and TrendThread.</p>
+  </footer>
+</div>
+<script type="module" src="main.js"></script>
+</body>
+</html>
